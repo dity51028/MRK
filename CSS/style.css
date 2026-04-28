@@ -126,10 +126,6 @@ body {
   border-radius: 3px;
 }
 
-/* ========================= */
-/* 🔥 PLANS SECTION (FINAL) */
-/* ========================= */
-
 .plans {
   position: relative;
   padding: 80px 0;
@@ -137,17 +133,14 @@ body {
   overflow: hidden;
 }
 
-/* mirrored background */
+
 .plans::before {
   content: "";
   position: absolute;
   inset: 0;
-
   background: url("../assests/hero.png") no-repeat center/cover;
-
   transform: scaleY(-1);
   opacity: 0.3;
-
   z-index: 0;
 }
 
@@ -191,6 +184,7 @@ body {
 .plan-item i {
   font-size: 30px;
   margin-bottom: 15px;
+  color: antiquewhite;
 }
 
 /* TEXT */
@@ -205,14 +199,84 @@ body {
 
 /* GRID LINES */
 
-/* vertical */
 .plan-item:nth-child(2),
 .plan-item:nth-child(5) {
   border-left: 1px solid #ff7a00;
   border-right: 1px solid #ff7a00;
 }
-
-/* horizontal */
 .plan-item:nth-child(-n+3) {
   border-bottom: 1px solid #ff7a00;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.subscribe-cards{
+   background: linear-gradient(180deg, #1a1a1a, #000);
+    width: 300px;
+    padding: 35px 20px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    position: relative;
+    transition: all .3s ease;
+    text-align: center;
+
+}
+
+.subscribe-cards h3{
+  font-size: 25px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.subscribe-cards p{
+  padding:10px;
+}
+.subscribe-cards p span{
+  font-weight: bold;
+  font-size: 40px;
+  color: #ff7a00;
+}
+
+small{
+  color: #8a7e7e;
+}
+
+.subscribe-cards div a{
+   margin-top: 20px;
+}
+.subscribe-cards:hover{
+  transform: translateY(-8px);
+  border-color: #ff7f20;
+  box-shadow: 0 0 22px rgba(255, 130, 30, 0.5);
+}
+
+.recomended{
+  border:1px solid #ff7a00;
+
+}
+
+.recomended .badge{
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff7f20;
+  color: #000;
+  padding: 4px 14px;
+  font-size: 14px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.subscribe-cards div a:hover{
+  border-color: #090908;
+  background-color: #ff7f20;
+  transition: all .5s ease;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
 }
