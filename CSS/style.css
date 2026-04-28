@@ -280,3 +280,104 @@ small{
   font-weight: bold;
   color: #000;
 }
+
+.trainer{
+  margin-top:100px;
+
+}
+
+.trainer .container .image{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.trainer .container .image img{
+  height: 342px;
+  width: 278px;
+}
+
+.trainer .container .image img:hover{
+  transform: translateY(-8px);
+  border-color: #ff7f20;
+  box-shadow: 0 0 22px rgba(255, 130, 30, 0.5);
+  transition: 0.3s ease-in-out;
+}
+
+/* Parent card */
+.trainer-card {
+  position: relative;
+  width: 350px;
+  height: 460px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Hover grow effect */
+.trainer-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling */
+.trainer-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay info box */
+.trainer-overlay {
+  position: absolute;
+  bottom: -50%;   /* hidden below image */
+  left: 0;
+  width: 100%;
+  height: 50%;    /* cover only bottom half */
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 20px;
+  transition: bottom 0.35s ease;
+}
+
+/* Slide-up on hover */
+.trainer-card:hover .trainer-overlay {
+  bottom: 0;
+}
+
+/* Text styling */
+.trainer-overlay h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.trainer-overlay p {
+  margin-top: 8px;
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+.join-us{
+  margin-top: 30px;
+}
+
+.benefits {
+  border: 2px solid #00aaff;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.benefit li {
+  margin: 15px 0;
+  font-size: 20px;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 5px;
+}
