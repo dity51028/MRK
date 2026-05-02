@@ -4,6 +4,7 @@ import Plans from "./components/Plans";
 import Subscription from "./components/Subscription";
 import Trainers from "./components/Trainers";
 import WhyJoinUs from "./components/WhyJoinUs";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
         <Trainers />
         <WhyJoinUs />
       </main>
-      {/* Optional: add a footer */}
+      <Footer />
     </div>
   );
 }
