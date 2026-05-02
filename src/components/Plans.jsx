@@ -1,4 +1,3 @@
-// src/components/Plans.jsx
 import heroBg from "../assets/hero.png";
 import {
   FaWeightScale,
@@ -12,7 +11,7 @@ const plans = [
   {
     icon: FaWeightScale,
     title: "Weight Loss",
-    desc: "Weight loss can have causes that aren't due to underlying disease.",
+    desc: "Weight loss can have causes that are not due to underlying disease.",
   },
   {
     icon: FaSpa,
@@ -44,10 +43,10 @@ const plans = [
 export default function Plans() {
   return (
     <section className="relative py-24 bg-black overflow-hidden">
-      {/* Flipped background with opacity */}
+      {/* Flipped background */}
       <div className="absolute inset-0 opacity-20">
         <img
-          src={heroBg} // reuse hero bg, or import another
+          src={heroBg}
           alt=""
           className="w-full h-full object-cover transform scale-y-[-1]"
         />
@@ -62,14 +61,14 @@ export default function Plans() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {plans.map((plan, idx) => {
             const Icon = plan.icon;
-            const borderClasses =
-              idx % 3 === 1 ? "sm:border-x border-orange-500/50" : "";
-            const bottomBorder = idx < 3 ? "border-b border-orange-500/50" : "";
+            const borderX =
+              idx % 3 === 1 ? "sm:border-x border-orange-500/40" : "";
+            const borderB = idx < 3 ? "border-b border-orange-500/40" : "";
 
             return (
               <div
                 key={idx}
-                className={`flex flex-col items-center text-center p-8 hover:bg-white/5 transition-all ${borderClasses} ${bottomBorder}`}
+                className={`flex flex-col items-center text-center p-8 transition-all duration-300 hover:bg-white/5 ${borderX} ${borderB}`}
               >
                 <Icon className="text-4xl text-orange-300 mb-4" />
                 <h3 className="text-xl font-semibold mb-3">{plan.title}</h3>

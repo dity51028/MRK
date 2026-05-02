@@ -1,4 +1,3 @@
-// src/components/Trainers.jsx
 import trainer1 from "../assets/Rectangle 9.png";
 import trainer2 from "../assets/Rectangle 8.png";
 import trainer3 from "../assets/Rectangle 10.png";
@@ -26,13 +25,10 @@ export default function Trainers() {
               <img
                 src={trainer.img}
                 alt={trainer.name}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              {/* Overlay that slides up */}
-              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-linear-to-t from-black/90 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500 flex flex-col justify-end p-6">
-                <h3 className="text-2xl font-bold text-white">
-                  {trainer.name}
-                </h3>
+              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-linear-to-t from-black via-black/60 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500 flex flex-col justify-end p-6">
+                <h3 className="text-2xl font-bold">{trainer.name}</h3>
                 <p className="text-orange-400 mt-1">{trainer.exp}</p>
               </div>
             </div>
